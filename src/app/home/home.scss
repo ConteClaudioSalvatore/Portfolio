@@ -1,0 +1,64 @@
+:host {
+  %liquid-glass {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow:
+      0 0 8px rgba(255, 255, 255, 0.05) inset,
+      0 1px 5px rgba(255, 255, 255, 0.125);
+  }
+  overflow: auto;
+  padding: 24px !important;
+  height: 100%;
+  display: block;
+  scroll-behavior: smooth;
+  position: relative;
+  scroll-snap-type: y mandatory;
+  & > section,
+  & > h1 {
+    scroll-snap-align: start;
+  }
+  nav {
+    padding: 16px;
+    border-radius: 24px;
+    @extend %liquid-glass;
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    position: fixed;
+    top: 24px;
+    left: 0;
+    & > a {
+      background-color: rgba(255, 255, 255, 0.05);
+      transition:
+        background-color var(--timing-function) 0.3s,
+        color var(--timing-function) 0.3s;
+      box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.05) inset,
+        0 1px 5px rgba(255, 255, 255, 0.125);
+      padding: 8px 16px;
+      border-radius: 16px;
+      text-decoration: none;
+      color: rgb(var(--color));
+      &:hover {
+        color: rgba(var(--color), 0.8);
+        background-color: rgba(255, 255, 255, 0.075);
+      }
+    }
+    &.shown {
+      opacity: 1;
+      overflow: visible;
+      height: unset;
+    }
+  }
+  h1 {
+    line-height: 8rem;
+    font-size: 6rem;
+    width: min-content;
+    height: 100dvh;
+  }
+  section {
+    height: 100dvh;
+    width: 100dvw;
+  }
+}

@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --background: 0, 0, 0;
+  --color: 255, 255, 255;
+  --timing-function: cubic-bezier(.3,1.25,.5,1);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: -1;
+    background-color: rgb(0, 100, 255);
+    mix-blend-mode: hue;
+  }
+  background-image:  url("/bg2.gif");
+  background-size:
+    cover;
+  background-position:
+    50% 0;
+  background-attachment: fixed;
+  color: rgb(var(--color));
+  font-size: 1.5rem;
+  font-family: "ExpeltusSans", sans-serif;
+  height: 100dvh;
+}
+
+@each $type, $weight in ("Bold": 700, "Medium": 500, "Regular": 400, "SemiBold": 600) {
+  @font-face {
+    font-family: "ExpeltusSans";
+    font-weight: $weight;
+    src: url("/font/ExpeltusSans-#{$type}.ttf");
+  }
+}
