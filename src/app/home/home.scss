@@ -55,10 +55,14 @@
     line-height: 8rem;
     font-size: 6rem;
     width: min-content;
-    height: 100dvh;
+  }
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   section {
     height: 100dvh;
-    width: 100dvw;
+    width: 100%;
   }
 }
