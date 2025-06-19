@@ -1,7 +1,113 @@
-<nav #nav>
-  <a routerLink="/">{{name}}</a>
+<nav class="app-nav liquid-glass">
+  <a href="#top" class="logo">{{name}}</a>
+  <a routerLink="/contactMe">contact me</a>
 </nav>
-<section #section class="presentation">
-  <h1>{{name}}</h1>
+<section id="top" class="presentation">
+  <h1 class="main-title">{{name}}</h1>
 </section>
-<section #section>ciao</section>
+<section>
+  <div class="card liquid-glass">
+    <h1 class="title">Experience</h1>
+    <h2 class="subtitle">Work</h2>
+    <app-experience-path>
+      <ng-template appExperience>
+        <h3 class="subject">INFOSYSTEM400</h3>
+        <span class="city">Fossano (CN)</span>
+        <span class="from-to"> 15/06/2022 - CURRENT </span>
+        <div class="description">
+          I am working primarily as a Front-End developer for ORS srl (Roddi
+          CN).
+          <br />
+          My role includes:
+          <ol>
+            <li>Maintaining React components and modules for the company</li>
+            <li>
+              Maintaining React based projects written with MeterialUI + AgGrid
+              or KendoReact
+            </li>
+            <li>
+              Authoring Backend Code (C# .NET with Entity Framework, MediatR,
+              Fluent Validation)
+            </li>
+            <li>
+              Developing a project for a customer based on React + Kendo React
+              Ui, in particular I am working in a team in pair with a BE
+              developer, our aim is to port functionalities already existing in
+              a windows fat client application to a web application and adding
+              new functionalities to it.
+            </li>
+            <li>
+              Creating and maintaining a starting point for all the new
+              applications in the company using Angular, NgRx and Kendo Ui for
+              Angular
+            </li>
+            <li>
+              Developing Angular projects initialized with the starting point
+              mentioned above (and since there are multiple projects i am also
+              collaboring with mulitiple teams)
+            </li>
+            <li>
+              Teaching new interns Angular, NgRx, RxJs, KendoUI and advanced
+              TypeScript
+            </li>
+          </ol>
+        </div>
+      </ng-template>
+    </app-experience-path>
+    <h2 class="subtitle">Stage(s)</h2>
+    <app-experience-path>
+      <ng-template appExperience>
+        <h3 class="subject">TAGLIO S.R.L.</h3>
+        <span class="city">Piobesi D'Alba (CN)</span>
+        <span class="from-to"> 04/07/2021 - 29/07/2021 </span>
+        <div class="description">
+          I was in a team of 3 developers.
+          <br />
+          Our aim was to create an application to manage a database which
+          contains translations for every company software, then convert these
+          translations into text files (xliff) so that they could work with
+          source control (git)
+        </div>
+      </ng-template>
+      <ng-template appExperience>
+        <h3 class="subject">ASCOM</h3>
+        <span class="city">Fossano (CN) (Remote)</span>
+        <span class="from-to"> 01/05/2022 - 25/05/20221 </span>
+        <div class="description">
+          Creation of a website through WIX, this website had the aim of
+          permitting Fossano's inhabitants to find every store in their city and
+          the relative informations about them. This required me to call a part
+          of these stores to ask for their permission to be on the site. From
+          this experience i acquired better team work abilities and better
+          interpersonal communication skills.
+        </div>
+      </ng-template>
+    </app-experience-path>
+    <h2 class="subtitle">Education</h2>
+    <app-experience-path>
+      <ng-template appExperience>
+        <h3 class="subject">I.I.S. G.Vallauri</h3>
+        <span class="city">Fossano (CN)</span>
+        <span class="from-to"> 13/09/2017 - 06/06/2022 </span>
+        <div class="description">
+          Degree in Information Technology and Telecommunications
+        </div>
+      </ng-template>
+    </app-experience-path>
+    <h2 class="subtitle">Languages</h2>
+    <app-experience-path>
+      <ng-template appExperience>
+        <h3 class="subject">Italian</h3>
+        <div class="description">
+          Native speaker
+        </div>
+      </ng-template>
+      <ng-template appExperience>
+        <h3 class="subject">English</h3>
+        <div class="description">
+          B2 (<a href="https://www.cambridgeenglish.org/it/exams-and-tests/first/">FCE</a>)
+        </div>
+      </ng-template>
+    </app-experience-path>
+  </div>
+</section>

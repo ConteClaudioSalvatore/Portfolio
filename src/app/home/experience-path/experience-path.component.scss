@@ -1,0 +1,74 @@
+:host {
+  padding: 8px;
+  display: block;
+  .path {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-wrap: wrap;
+    .path-step {
+      display: flex;
+      position: relative;
+      gap: 16px;
+      &::before {
+        content: "";
+        flex: 0 0 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        bottom: 4px;
+        transform: translateX(3px);
+        width: 2px;
+        z-index: -1;
+        background-color: #fff;
+      }
+      &:not(:last-child) > .content {
+        padding-block-end: 8px;
+      }
+      & > .content {
+        align-self: center;
+        display: grid;
+        grid-template-areas: "subject city" "from-to from-to" "description description";
+        gap: 8px;
+        place-items: center left;
+        width: 100%;
+        ::ng-deep {
+          & > .subject {
+            font-size: 1.5rem;
+            font-weight: 500;
+            grid-area: subject;
+          }
+          & > .city {
+            font-size: 1.2rem;
+            font-weight: 500;
+            place-self: center right;
+            grid-area: city;
+          }
+          & > .from-to {
+            grid-area: from-to;
+            font-size: 1rem;
+          }
+          & > .description {
+            grid-area: description;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #ddd;
+            ol,
+            ul {
+              margin-left: 24px;
+            }
+            a {
+              color: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}
