@@ -25,11 +25,11 @@
   overflow: auto;
   height: 100%;
   display: block;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   position: relative;
   scroll-timeline: --scrollTimeline y;
-  & > section,
-  & > h1 {
+  & > section {
     scroll-snap-align: start;
     padding: 24px;
   }
